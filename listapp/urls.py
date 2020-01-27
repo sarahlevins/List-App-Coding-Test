@@ -15,7 +15,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from tennis.views import PlayerList
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', PlayerList.as_view())
 ]
