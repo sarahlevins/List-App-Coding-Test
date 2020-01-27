@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block content %}
+
+<table>
+  <tr>
+    <th>First Name</th>
+    <th>Last Name</th>
+    <th>Nationality</th>
+    <th>More Info</th>
+  </tr>
+  {% for player in object_list %}
+  <tr>
+    <td>{{ player.first_name}}</td>
+    <td>{{ player.last_name }}</td>
+    <td>{{ player.nationality }}</td>
+    <td><a href="{% url 'player-detail' player.id %}">More Info</a>
+    </td>
+  </tr>
+  {% endfor %}
+</table>
+
+{% endblock %}
