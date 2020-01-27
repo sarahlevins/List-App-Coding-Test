@@ -13,7 +13,7 @@
     <td>{{ player.first_name}}</td>
     <td>{{ player.last_name }}</td>
     <td>{{ player.nationality }}</td>
-    <td><a href="{% url 'player-detail' player.id %}">More Info</a>
+    <td><a href="{% url 'detail-player' player.id %}">More Info</a>
     </td>
   </tr>
   {% endfor %}

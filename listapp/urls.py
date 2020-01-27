@@ -15,10 +15,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from tennis.views import PlayerList, PlayerDetail
+from tennis.views import PlayerList, PlayerDetail, PlayerAdd, PlayerDelete
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', PlayerList.as_view(), name='home'),
-    path('<int:pk>/', PlayerDetail.as_view(), name='player-detail')
+    path('<int:pk>/', PlayerDetail.as_view(), name='detail-player',),
+    path('add_player/', PlayerAdd.as_view(), name='add-player'),
+    path('<int:pk>/delete_player/', PlayerDelete.as_view(), name='delete-player')
 ]
