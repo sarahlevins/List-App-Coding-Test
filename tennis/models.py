@@ -13,3 +13,6 @@ class Player(models.Model):
 
     def __str__(self):
         return self.first_name
+
+class PageViews(models.Model):
+    count = models.IntegerField()
