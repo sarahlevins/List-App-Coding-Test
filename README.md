@@ -38,4 +38,9 @@ python manage.py migrate
 python manage.py createsuperuser
 ```
 
+Load data fixtures using the following command
+```bash
+python manage.py loaddata player_data.json
+```
+
 Application will be on http://localhost:8000/

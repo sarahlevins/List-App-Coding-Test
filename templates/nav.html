@@ -1,2 +1,7 @@
-<a href="{% url 'home' %}">Home</a> |
-<a href="{% url 'add-player' %}">Add a Player</a>
+{% load static %}
+
+<div class='container' style='margin-top: 30px;'>
+    <a href="{% url 'home' %}">Home</a> |
+    <a href="{% url 'add-player' %}">Add a Player</a> |
+    Page View Count: {{ page_views }}
+</div>

@@ -1,8 +1,11 @@
 {% extends "base.html" %}
 
 {% block content %}
-<h2>{{ player.first_name }} {{ player.last_name }}</h2>
-<p>Country: {{ player.nationality }}</p>
+<div class='container'>
 
-<a href="{% url 'delete-player' player.id %}">Delete {{ player.first_name }}</a>
+    <h2>{{ player.first_name }} {{ player.last_name }}</h2>
+    <p>Country: {{ player.nationality }}</p>
+
+    <a href="{% url 'delete-player' player.id %}">Delete {{ player.first_name }}</a>
+</div>
 {% endblock %}
