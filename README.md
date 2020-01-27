@@ -10,17 +10,19 @@ Set up the virtual environment and install requirements
 pip install virtualenv
 virtualenv venv
 source venv/bin/activate
-
-pip install requirements.txt
+cd List-App-Coding-Test
+pip install -r requirements.txt
 ```
 
 This application uses a postgreSQL database.
 Create your database
 
 ```sql
+psql
 CREATE DATABASE yourdbname;
 CREATE USER youruser WITH ENCRYPTED PASSWORD 'yourpass';
 GRANT ALL PRIVILEGES ON DATABASE yourdbname TO youruser;
+\q
 ```
 
 Set your database credentials as environment variables
